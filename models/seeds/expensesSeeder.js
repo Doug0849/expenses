@@ -4,8 +4,7 @@ const db = require('../../config/mongoose')
 db.once('open', () => {
   for ( let i = 0; i < 10; i++){
     Expense.create({
-      category_1: '分類1',
-      category_2: '分類2',
+      category: '分類1',
       itemName: `itemName-` + i,
       cost: 100,
       method: '現金',

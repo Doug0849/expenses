@@ -1,20 +1,28 @@
-<div class="container">
-  <h2>Hello 這是記帳簿</h2>
-  <div id="display-items" class="display-items">
-    <!-- 從這開始產生資料 -->
-    {{#each expensesItems}}
-    <div id="category-1" class="category-1">{{this.category_1}}</div>
-    <div id="category-2" class="category-2">{{this.category_2}}</div>
-    <div id="itemName" class="itemName">{{this.category_1}}</div>
-    <div id="cost" class="cost">{{this.itemName}}</div>
-    <div id="method" class="method">{{this.method}}</div>
-    <div id="time" class="time">
-      <div id="year" class="year">{{this.time.year}}</div>
-      <div id="month" class="month">{{this.time.month}}</div>
-      <div id="date" class="date">{{this.time.date}}</div>
-      <div id="hour" class="hour">{{this.time.hour}}</div>
-      <div id="minute" class="minute">{{this.time.minute}}</div>
+<main>
+  <div class="container">
+    <div class="main-wrapper">
+      <div id="display-items" class="display-items">
+        <!-- 從這開始產生資料 -->
+        {{#each expenseItems}}
+        <div class="items-wrapper">
+          <div id="time" class="time">
+            <div id="month" class="month">{{this.time.month}}月</div>
+            <div id="date" class="date">{{this.time.date}}日</div>
+            <div id="hour" class="hour">{{this.time.hour}}:</div>
+            <div id="minute" class="minute">{{this.time.minute}}</div>
+          </div>
+          <div id="category" class="category">{{this.category}}</div>
+          <div id="item-name" class="item-name">{{this.itemName}}</div>
+          <div id="cost" class="cost">{{this.cost}}</div>
+          <div id="method" class="method">{{this.method}}</div>
+          <div class="item-btn-wrapper">
+            <a href="#" class="btn-detail btn-common">詳細</a>
+            <a href="#" class="btn-edit btn-common">編輯</a>
+            <a href="#" class="btn-delete btn-common">刪除</a>
+          </div>
+        </div>
+        {{/each }}
+      </div>
     </div>
-    {{/each }}
   </div>
-</div>
+</main>

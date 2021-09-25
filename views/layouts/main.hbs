@@ -6,21 +6,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Happy Shopping</title>
+  <title>Expenses Record</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-  <nav>
+  <header>
     <div class="container">
-      <p>報表...blablabla還沒決定</p>
-      <div id="assets" class="assets">資產</div>
-      <div id="annual-report" class="annual-report">年報表</div>
-      <div id="month-report" class="month-report">月報表</div>
-      <div id="date-report" class="date-report">日報表</div>
+      <div class="nav-wrapper">
+        <h1 class="title">My Wallet</h1>
+        <div class="list-wrapper">
+          <ul class="nav-list">
+            <li class="nav-items">資產</li>
+            <li class="nav-items">年統計</li>
+            <li class="nav-items">月統計</li>
+            <li class="nav-items">日統計</li>
+          </ul>
+        </div>
+        <div class="date-wrapper">
+            <div class="year">年</div>
+            <div class="month-date">月日</div>
+        </div>
+        <div class="btn-panel">
+          <a href="/expense/new" class="btn-create btn-common">+</a>
+        </div>
+      </div>
     </div>
-  </nav>
+  </header>
   <!-- partial templates will replace the part of "body" here -->
   {{{ body }}}
+  <script src="/javascripts/main.js"></script>
 </body>
 
 </html>

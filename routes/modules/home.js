@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
   Expenses.find()
     .lean()
     .sort({ _id: 'asc' })
-    .then(expensesItems => res.render('index', { expensesItems }))
+    .then(expenseItems => res.render('index', { expenseItems }))
     .catch(error => console.log(error))
 })
 

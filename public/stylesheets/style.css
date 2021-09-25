@@ -1,0 +1,218 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/********** common css ************/
+@font-face {
+  font-family: 'NotoSansTC';
+  src: url("./fonts/Noto_Sans_TC/NotoSansTC-Regular.otf") format('opentype');
+  font-style: normal;
+}
+
+body {
+  font-family: 'NotoSansTC';
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+.container {
+  min-width: 400px;
+  max-width: 870px;
+  height: 100%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.btn-create,
+.btn-common {
+  padding: 0 1rem;
+  height: 1.5rem;
+  line-height: 1.4rem;
+  text-align: center;
+  width: auto;
+  border: 0 solid #991B08;
+  border-radius: 10px 10px;
+  background-color: #FF624B;
+  color: #CCFFFF;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/********** main css ************/
+header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
+  background-color: #009999;
+}
+
+.nav-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  color: #CCFFFF;
+}
+
+.title {
+  width: 30%;
+  min-width: 160px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.list-wrapper {
+  width: auto;
+}
+
+.nav-list {
+  display: grid;
+  grid-template-columns: repeat(4,auto);
+  grid-gap: 1rem;
+}
+
+.date-wrapper {
+  margin-top: .6rem;
+  width: 50%;
+  height: 1.6rem;
+  display:grid;
+  grid-template-columns: 60px 120px;
+  grid-gap: 0.2rem;
+  align-items: flex-end;
+}
+
+.year {
+  width: auto;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
+.month-date {
+  width: auto;
+  height: 1rem;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.btn-panel {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+
+/********* index ************/
+main {
+  background-color: #eaebec;
+}
+.main-wrapper {
+  padding-top: 120px;
+  width: 100%;
+  height: 100%;
+}
+
+.display-items {
+  display:grid;
+  grid-template-columns: auto;
+}
+
+.items-wrapper {
+  width: 100%;
+  display:grid;
+  grid-template-areas:
+      "time time item-btn-wrapper"
+      "category item-name item-btn-wrapper"
+      "cost method item-btn-wrapper";
+  grid-gap: 0.5rem;
+  border: 1px solid gray;
+  margin-bottom: 0.5rem;
+  padding: .5rem;
+}
+
+.time {
+  grid-area: time;
+  display: flex;
+}
+
+.category {
+  grid-area: category;
+}
+
+.item-name {
+  grid-area: item-name;
+}
+
+.cost {
+  grid-area: cost;
+}
+
+.method {
+  grid-area: method;
+}
+
+.item-btn-wrapper {
+  grid-area: item-btn-wrapper;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn-detail,
+.btn-edit {
+  background-color: #E59317;
+}
