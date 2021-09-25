@@ -13,29 +13,32 @@ const expenseSchema = new Schema({
     type: Number,
     required: true,
   },
-    method: {
+  method: {
     type: String,
     required: true,
   },
+  remark: {
+    type: String,
+  },
   time: {
     year: {
-      type: Number,
+      type: String,
       required: true,
     },
     month: {
-      type: Number,
+      type: String,
       required: true,
     },
     date: {
-      type: Number,
+      type: String,
       required: true,
     },
     hour: {
-      type: Number,
+      type: String,
       required: true,
     },
     minute: {
-      type: Number,
+      type: String,
       required: true,
     },
   }

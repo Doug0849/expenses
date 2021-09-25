@@ -50,6 +50,28 @@ table {
 	border-spacing: 0;
 }
 
+/* 隱藏滾動條Chrome瀏覽器 */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* 隱藏滾動條IE/Edge瀏覽器 */
+body {
+    -ms-overflow-style: none;
+}
+
+/* 隱藏滾動條Firefox */
+html {
+    overflow: -moz-hidden-unscrollable; /*注意！若只打 hidden，chrome 的其它 hidden 會出問題*/
+    height: 100%;
+}
+
+body {
+	height: 100%;
+	width: calc(100vw + 18px); /*瀏覽器滾動條的長度大約是 18px*/
+	overflow: auto;
+}
+
 /********** common css ************/
 @font-face {
   font-family: 'NotoSansTC';
@@ -62,8 +84,8 @@ body {
 }
 
 a {
+  color: #CCFFFF;
   text-decoration: none;
-  color: #333333;
 }
 
 .container {
@@ -74,19 +96,24 @@ a {
   margin: 0 auto;
 }
 
-.btn-create,
+.main-wrapper {
+  padding-top: 120px;
+  width: 100%;
+  height: 100%;
+}
+
 .btn-common {
   padding: 0 1rem;
-  height: 1.5rem;
-  line-height: 1.4rem;
+  height: 1.8rem;
+  line-height: 1.7rem;
   text-align: center;
   width: auto;
   border: 0 solid #991B08;
   border-radius: 10px 10px;
   background-color: #FF624B;
-  color: #CCFFFF;
+  color: #e7e7e7;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /********** main css ************/
@@ -160,11 +187,7 @@ header {
 main {
   background-color: #eaebec;
 }
-.main-wrapper {
-  padding-top: 120px;
-  width: 100%;
-  height: 100%;
-}
+
 
 .display-items {
   display:grid;
@@ -179,7 +202,7 @@ main {
       "category item-name item-btn-wrapper"
       "cost method item-btn-wrapper";
   grid-gap: 0.5rem;
-  border: 1px solid gray;
+  border-bottom: .2rem solid gray;
   margin-bottom: 0.5rem;
   padding: .5rem;
 }
@@ -187,6 +210,7 @@ main {
 .time {
   grid-area: time;
   display: flex;
+  font-size: 1.5rem;
 }
 
 .category {
@@ -199,6 +223,7 @@ main {
 
 .cost {
   grid-area: cost;
+  
 }
 
 .method {
@@ -215,4 +240,30 @@ main {
 .btn-detail,
 .btn-edit {
   background-color: #E59317;
+}
+
+/* add page */
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  font-size: 1.5rem;
+  margin: .5rem 0 ;
+}
+
+input,select,textarea {
+  width: 20rem;
+  height: 3rem;
+  text-align:center;
+  font-size: 1.2rem;
+}
+
+textarea {
+  height: 10rem;
+  margin-bottom: 1rem;
 }

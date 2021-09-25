@@ -8,6 +8,7 @@ db.once('open', () => {
       itemName: `itemName-` + i,
       cost: 100,
       method: '現金',
+      remark:'備註內容',
       time: {
         year: 2021,
         month: 9,
