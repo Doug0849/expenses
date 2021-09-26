@@ -9,6 +9,10 @@ const expenseSchema = new Schema({
     type: String,
     required: true,
   },
+  inOrOut: {
+    type: String,
+    required: true,
+  },
   cost: {
     type: Number,
     required: true,

@@ -6,6 +6,7 @@ db.once('open', () => {
     Expense.create({
       category: '分類1',
       itemName: `itemName-` + i,
+      inOrOut: '支出',
       cost: 100,
       method: '現金',
       remark:'備註內容',

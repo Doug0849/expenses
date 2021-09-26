@@ -5,6 +5,10 @@
         <label for="input-date">日期</label>
         <input type="date" class="input-date" id='input-date' name="time"
           value="{{expense.time.year}}-{{expense.time.month}}-{{expense.time.date}}">
+        <select class="input-in-or-out" id="input-in-or-out" name="inOrOut">
+          <option value="支出">支出</option>
+          <option value="收入">收入</option>
+        </select>
         <label for="input-method">資產</label>
         <select class="input-method" id="input-method" name="method" value="{{expense.method}}">
           <option value="現金">現金</option>

@@ -198,9 +198,9 @@ main {
   width: 100%;
   display:grid;
   grid-template-areas:
-      "time time item-btn-wrapper"
-      "category item-name item-btn-wrapper"
-      "cost method item-btn-wrapper";
+      "time time time item-btn-wrapper"
+      "category item-name item-name item-btn-wrapper"
+      "in-or-out cost method item-btn-wrapper";
   grid-gap: 0.5rem;
   border-bottom: .2rem solid gray;
   margin-bottom: 0.5rem;
@@ -219,6 +219,10 @@ main {
 
 .item-name {
   grid-area: item-name;
+}
+
+.in-or-out {
+  grid-area: in-or-out;
 }
 
 .cost {
@@ -253,15 +257,17 @@ main {
 }
 
 label {
+  display:block;
   font-size: 1.5rem;
-  margin: .5rem 0 ;
+  margin-top: .5rem;
 }
 
 input,select,textarea {
   width: 20rem;
-  height: 3rem;
+  height: 2.5rem;
   text-align:center;
   font-size: 1.2rem;
+  margin: 0.5rem 0;
 }
 
 textarea {
@@ -284,6 +290,7 @@ textarea {
 }
 
 .date-text,
+.in-or-out-text,
 .method-text,
 .category-text,
 .item-name-text,
@@ -295,6 +302,7 @@ textarea {
 }
 
 .expense-date,
+.expense-in-or-out,
 .expense-method,
 .expense-category,
 .expense-item-name,
