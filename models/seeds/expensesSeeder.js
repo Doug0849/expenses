@@ -10,11 +10,11 @@ db.once('open', () => {
       method: '現金',
       remark:'備註內容',
       time: {
-        year: 2021,
-        month: 9,
-        date: 19,
-        hour: 21,
-        minute: 9,
+        year: '2021',
+        month: '09',
+        date: '19',
+        hour: '21',
+        minute: '9',
       }
     })
   }

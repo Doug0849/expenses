@@ -1,17 +1,19 @@
 <div class="container">
   <div class="main-wrapper">
-    <form action="/expenses/add" method="POST" id="form">
+    <form action="/expenses/{{expense._id}}?_method=PUT" method="POST" id="form">
       <div class="input-wrapper">
         <label for="input-date">日期</label>
-        <input type="date" class="input-date" id='input-date' name="time">
+        <input type="date" class="input-date" id='input-date' name="time"
+          value="{{expense.time.year}}-{{expense.time.month}}-{{expense.time.date}}">
         <label for="input-method">資產</label>
-        <select class="input-method" id="input-method" name="method">
+        <select class="input-method" id="input-method" name="method" value="{{expense.method}}">
           <option value="現金">現金</option>
           <option value="信用卡">信用卡</option>
           <option value="帳戶轉帳">帳戶轉帳</option>
         </select>
         <label for="input-category">類別</label>
-        <input class="input-category" id="input-category" list="options-category" name="category">
+        <input class="input-category" id="input-category" list="options-category" name="category"
+          value="{{expense.category}}">
         <datalist id="options-category">
           <option>選擇一項類別，或自行輸入</option>
           <option>食物</option>
@@ -28,15 +30,17 @@
           <option>其他</option>
         </datalist>
         <label for="input-item-name">內容</label>
-        <input type="text" class="input-item-name" id="input-item-name" name="itemName">
+        <input type="text" class="input-item-name" id="input-item-name" name="itemName" value="{{expense.itemName}}">
         <label for="input-cost">花費</label>
-        <input type="number" class="input-cost" id="input-cost" name="cost" inputmode="numeric">
+        <input type="number" class="input-cost" id="input-cost" name="cost" inputmode="numeric"
+          value="{{expense.cost}}">
         <label for="remark-textarea" class="input-remark">備註</label>
-        <textarea name="remark" id="input-remark-area" cols="30" rows="10"></textarea>
-        <button class="btn-submit btn-common" type="submit">儲存</button>
+        <textarea name="remark" id="input-remark-area" cols="30" rows="10">{{expense.remark}}</textarea>
+        <div class="add-btn-wrapper">
+          <button class="btn-submit btn-common" type="submit">儲存</button>
+          <button class="btn-delete btn-common" type="submit">刪除</button>
+        </div>
       </div>
     </form>
   </div>
 </div>
-
-<script src="/javascripts/add.js"></script>

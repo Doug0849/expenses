@@ -233,16 +233,17 @@ main {
 .item-btn-wrapper {
   grid-area: item-btn-wrapper;
   display:flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
 }
 
 .btn-detail,
 .btn-edit {
   background-color: #E59317;
+  margin-left: 1rem;
 }
 
-/* add page */
+/* add and edit page */
 
 .input-wrapper {
   display: flex;
@@ -267,3 +268,52 @@ textarea {
   height: 10rem;
   margin-bottom: 1rem;
 }
+
+.btn-submit {
+  background-color: #E59317;
+}
+
+
+/* detail page */
+
+.detail-wrapper {
+  display: grid;
+  grid-template-columns: 100px auto;
+  grid-gap: 0.5rem;
+  justify-items: center;
+}
+
+.date-text,
+.method-text,
+.category-text,
+.item-name-text,
+.cost-text,
+.remark-text {
+  border: auto;
+  padding: 0.2rem;
+  font-size: 1.2rem;
+}
+
+.expense-date,
+.expense-method,
+.expense-category,
+.expense-item-name,
+.expense-cost,
+.expense-remark,
+.expense-remark {
+  font-size: 1.2rem;
+  border: auto;
+  padding: 0.2rem;
+}
+
+.detail-btn-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-edit,
+.btn-delete {
+  margin-left: 0.5rem;
+}
+

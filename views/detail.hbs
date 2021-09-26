@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="main-wrapper">
+    <div class="detail-wrapper">
+      <div class="date-text">日期</div>
+      <div class="expense-date" id='expense-date'>{{expense.time.year}}-{{expense.time.month}}-{{expense.time.date}}
+      </div>
+      <div class="method-text">資產</div>
+      <div class="expense-method" id='expense-method'>{{expense.method}}</div>
+      <div class="category-text">類別</div>
+      <div class="expense-category" id='expense-category'>{{expense.category}}</div>
+      <div class="item-name-text">類別</div>
+      <div class="expense-item-name" id='expense-item-name'>{{expense.itemName}}</div>
+      <div class="cost-text">花費</div>
+      <div class="expense-cost" id='expense-cost'>{{expense.cost}}</div>
+      <div class="remark-text">備註</div>
+      <div class="expense-remark" id='expense-remark'>{{expense.remark}}</div>
+    </div>
+    <div class="detail-btn-wrapper">
+      <a href="/expenses/{{expense._id}}/edit" class="btn-edit btn-common">編輯</a>
+      <a href="#" class="btn-delete btn-common">刪除</a>
+    </div>
+  </div>
+</div>

@@ -17,9 +17,9 @@ function insertToday() {
   } else {
     date += '0' + (today.getDate())
   }
-  
-  inputDate.value = `${year}-${month}-${date}`
 
+  inputDate.value = `${year}-${month}-${date}`
+  
 }
 
 insertToday()
