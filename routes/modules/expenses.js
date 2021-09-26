@@ -14,8 +14,8 @@ router.post('/add', (req,res) => {
     hour: new Date().getHours(),
     minute: new Date().getMinutes(),
 }
-  const { method, category, itemName, cost, remark }= req.body
-  return Expenses.create({category, itemName, cost, method, remark, time})
+  const { method, inOrOut, category, itemName, cost, remark }= req.body
+  return Expenses.create({ category, itemName, inOrOut, cost, method, remark, time})
   .then(res.redirect('/'))
   .catch(error => console.log(error))
 })
@@ -47,7 +47,7 @@ router.put('/:id', (req,res) => {
     month: req.body.time.split('-')[1],
     date: req.body.time.split('-')[2],
   }
-  const { method, category, itemName, cost, remark } = req.body
+  const { method, inOrOut, category, itemName, cost, remark } = req.body
   return Expenses.findById(id)
     .then(expense => {
       expense.time.year = time.year
@@ -56,12 +56,21 @@ router.put('/:id', (req,res) => {
       expense.method = method
       expense.category = category
       expense.itemName = itemName
+      expense.inOrOut = inOrOut
       expense.cost = cost
       expense.remark = remark
       return expense.save()
     })
     .then(() => res.redirect(`/`))
     .catch(error => console.log(error))
+})
+
+router.delete('/:id', (req,res) => {
+  const id = req.params.id
+  return Expenses.findById(id)
+  .then( expense => expense.remove())
+  .then ( () => res.redirect('/'))
+  .catch(error => console.log(error))
 })
 
 module.exports = router
