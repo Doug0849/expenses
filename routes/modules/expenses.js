@@ -19,7 +19,7 @@ router.get('/:name', (req, res) => {
         .lean()
         .sort({ time: 'desc' })
         .then(expenseItems => {
-          const name = req.params.name + '，'
+          const name = req.params.name
           expenseItems.forEach(item => {
             item.name = name
           })

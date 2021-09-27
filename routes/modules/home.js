@@ -20,4 +20,9 @@ router.get('/logout', (req,res) => {
   return res.redirect(`/`)
 })
 
+router.get('/register', (req, res) => {
+    return res.render('register')
+})
+
+
 module.exports = router
