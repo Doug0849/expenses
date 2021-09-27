@@ -1,7 +1,7 @@
 <div class="container">
   <div class="main-wrapper">
     <div class="input-wrapper">
-      <form action="/expenses/{{expense._id}}?_method=PUT" method="POST" id="edit-form">
+      <form action="/expenses/{{name}}/{{expense._id}}?_method=PUT" method="POST" id="edit-form">
         <label for="input-date">日期</label>
         <input type="date" class="input-date" id='input-date' name="time"
           value="{{expense.time.year}}-{{expense.time.month}}-{{expense.time.date}}">
@@ -44,7 +44,7 @@
           <button class="btn-submit btn-common" type="submit">儲存</button>
         </div>
       </form>
-      <form action="/expenses/{{expense._id}}?_method=DELETE" method="POST" id="delete-form">
+      <form action="/expenses/{{name}}/{{expense._id}}?_method=DELETE" method="POST" id="delete-form">
         <button class="btn-delete btn-common" type="submit">刪除</button>
       </form>
     </div>

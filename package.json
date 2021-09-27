@@ -7,12 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "seeds": "node models/seeds/expensesSeeder.js"
+    "seeds": "node models/seeds/expensesSeeder.js",
+    "accountSeeds": "node models/seeds/accountSeeder.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.3",
     "method-override": "^3.0.0",

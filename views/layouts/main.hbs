@@ -24,12 +24,14 @@
           </ul>
         </div>
         <div class="date-wrapper">
-            <div class="year">年</div>
-            <div class="month-date">月日</div>
+          <div class="year">年</div>
+          <div class="month-date">月日</div>
         </div>
         <div class="btn-panel">
-          <a href="/expenses/add" class="btn-create btn-common">+</a>
+          <a href="/expenses/{{name}}/add" class="btn-create btn-common">+</a>
         </div>
+        <a href="/logout" class="btn-logout btn-common">登出</a>
+        <div class="hello">Hi，{{name}} 你今天過得好嗎?</div>
       </div>
     </div>
   </header>

@@ -18,8 +18,8 @@
       <div class="expense-remark" id='expense-remark'>{{expense.remark}}</div>
     </div>
     <div class="detail-btn-wrapper">
-      <a href="/expenses/{{expense._id}}/edit" class="btn-edit btn-common">編輯</a>
-      <form action="/expenses/{{expense._id}}?_method=DELETE" method="POST" id="detail-delete-form">
+      <a href="/expenses/{{name}}/{{expense._id}}/edit" class="btn-edit btn-common">編輯</a>
+      <form action="/expenses/{{name}}/{{expense._id}}?_method=DELETE" method="POST" id="detail-delete-form">
         <button class="btn-delete btn-common" type="submit">刪除</button>
       </form>
     </div>

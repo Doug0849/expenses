@@ -7,3 +7,4 @@ monthDate.innerText = `${date.getMonth() + 1} 月 ${date.getDate()} 日`
 }
 
 innerTitleDate()
+

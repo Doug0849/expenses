@@ -178,11 +178,28 @@ header {
 }
 
 .btn-panel {
-  width: 50%;
+  width: 42%;
   display: flex;
   justify-content: end;
+  align-items: center;
+}
+.btn-panel .btn-create {
+  margin-left: .5rem;
 }
 
+.btn-logout {
+  width: 7.5%;
+  text-align: center;
+  margin-left: 0.5%;
+  background-color: #812F33;
+}
+
+.hello {
+  width: 100%;
+  margin-top: .5rem;
+  height: 1rem;
+  line-height: 1rem;
+}
 /********* index ************/
 main {
   background-color: #eaebec;
