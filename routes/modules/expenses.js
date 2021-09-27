@@ -2,7 +2,6 @@ const express = require('express')
 const router = express.Router()
 const Expenses = require('../../models/expense')
 const Accounts = require('../../models/account')
-const account = require('../../models/account')
 
 
 

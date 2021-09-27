@@ -384,7 +384,7 @@ textarea {
 }
 
 .login-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
@@ -403,7 +403,8 @@ textarea {
 }
 
 .email-wrapper,
-.password-wrapper {
+.password-wrapper,
+.wrapper {
   width: 100%;
 }
 
@@ -413,7 +414,8 @@ textarea {
 }
 
 input#email,
-input#password {
+input#password,
+input#name {
   width: 100%;
   border-radius: .5rem;
   border: 1px solid #dddddd;
@@ -447,4 +449,27 @@ a.login-btn {
   top: 3px;
   height: 100%;
   vertical-align: sub;
+}
+
+/* log in fail */
+.fail-wrapper {
+  width:100%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+.login-fail {
+  font-size: 1.5rem;
+}
+
+.btn-back {
+  color: #444444;
+  width: 60px;
+  text-align: center;
+  border: 1.2px solid #444444;
+  background-color: #d3dedf ;
+  border-radius: 0.5rem;
+  padding: .5rem;
 }
